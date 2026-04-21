@@ -11,36 +11,36 @@
 
     <header class="site-header">
 
-    <div class="mobile-nav-bar">
+        <div class="mobile-nav-bar">
 
-        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <button type="button" class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <h1>ABOUT</h1>
+            <h1>ABOUT</h1>
 
-    </div>
+        </div>
 
-    <nav id="site-nav">
+        <nav id="site-nav">
 
-        <a href="index.html" class="nav-home"><span>HOME</span></a>
-        <a href="quiz.html" class="nav-quiz"><span>QUIZ</span></a>
-        <a href="learn.html" class="nav-learn"><span>LEARN / SUPPORT</span></a>
-        <a href="learn.html#references" class="nav-references"><span>REFERENCES</span></a>
-        <a href="about.html" class="nav-about"><span>ABOUT</span></a>
+            <a href="index.html" class="nav-home"><span>HOME</span></a>
+            <a href="quiz.html" class="nav-quiz"><span>QUIZ</span></a>
+            <a href="learn.html" class="nav-learn"><span>LEARN / SUPPORT</span></a>
+            <a href="learn.html#references" class="nav-references"><span>REFERENCES</span></a>
+            <a href="about.html" class="nav-about"><span>ABOUT</span></a>
 
-    </nav>
+        </nav>
 
-</header>
+    </header>
 
     <main>
 
         <section>
 
             <div class="about-top-icon-placeholder">
-                <span>ICON PLACEHOLDER</span>
+                <img src="assets/why-this-matters.png" alt="Why this website matters icon" class="about-top-icon">
             </div>
 
             <h2>Why this website exists</h2>
@@ -67,7 +67,7 @@
             </p>
 
             <div class="about-image-placeholder">
-                <span>ABOUT PAGE IMAGE PLACEHOLDER</span>
+                <img src="assets/about-2.png" alt="About page image" class="about-image">
             </div>
 
         </section>
@@ -83,22 +83,19 @@
     </footer>
 
     <script>
-    const navToggle = document.getElementById("nav-toggle");
-    const siteHeader = document.querySelector(".site-header");
+        const navToggle=document.getElementById("nav-toggle");
+        const siteHeader=document.querySelector(".site-header");
 
-    if(navToggle && siteHeader){
+        if(navToggle && siteHeader){
 
-        navToggle.addEventListener("click", function(){
+            navToggle.addEventListener("click", function(){
 
-            siteHeader.classList.toggle("nav-open");
+                siteHeader.classList.toggle("nav-open");
 
-            const isOpen = siteHeader.classList.contains("nav-open");
-            navToggle.setAttribute("aria-expanded", String(isOpen));
+            });
 
-        });
-
-    }
-</script>
+        }
+    </script>
 
 </body>
 </html>

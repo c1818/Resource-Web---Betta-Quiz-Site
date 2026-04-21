@@ -1,0 +1,238 @@
+main{
+
+    max-width:none;
+
+}
+
+.home-grid-layout{
+
+    display:grid;
+    gap:1.5rem;
+    margin:0 auto 1.5rem;
+    grid-template-areas:
+        "intro"
+        "image"
+        "support"
+        "secondary";
+
+}
+
+.home-intro-section{
+
+    grid-area:intro;
+
+}
+
+.home-grid-layout > .home-image-placeholder:first-child{
+
+    grid-area:image;
+
+}
+
+.home-support-section{
+
+    grid-area:support;
+
+}
+
+.home-image-placeholder-secondary{
+
+    grid-area:secondary;
+
+}
+
+.home-image-placeholder{
+
+    position:relative;
+    display:block;
+    width:100%;
+    min-height:11rem;
+    height:15rem;
+    overflow:hidden;
+    border:1px solid #cfc4b2;
+    border-radius:0.9rem;
+
+}
+
+.home-image{
+
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+.home-intro-section,
+.home-support-section{
+
+    margin-bottom:0;
+    border:0;
+
+}
+
+.home-intro-section{
+
+    padding-top:2.2rem;
+    padding-bottom:2.2rem;
+
+}
+
+.home-support-section{
+
+    position:relative;
+    padding-top:2rem;
+    padding-bottom:2.6rem;
+
+}
+
+.home-support-section::before{
+
+    content:"";
+    display:block;
+    width:100%;
+    border-top:1px solid #cfc4b2;
+    margin:-1rem auto 4rem;
+
+}
+
+.home-quiz-button-wrap{
+
+    margin-top:2.25rem;
+    margin-bottom:0;
+    text-align:center;
+
+}
+
+.home-quiz-button{
+
+    position:relative;
+    top:2px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:5rem;
+    padding:0.6rem 0.75rem;
+    border:1px solid transparent;
+    border-radius:0.65rem;
+    background-color:#B2B948;
+    color:#354425;
+    font-family:"Iosevka Etoile Web", monospace;
+    font-size:0.9rem;
+    line-height:1;
+    text-align:center;
+    box-shadow:0 4px 0 #8F9732;
+    transition:0.2s ease;
+
+}
+
+.home-quiz-button:hover,
+.home-quiz-button:focus-visible{
+
+    filter:brightness(0.82);
+    font-style:italic;
+
+}
+
+.home-quiz-button:hover span,
+.home-quiz-button:focus-visible span{
+
+    font-style:italic;
+
+}
+
+.section-divider{
+
+    margin-bottom:1.8rem;
+
+}
+
+.home-support-section ul{
+
+    margin-bottom:0;
+
+}
+
+@media screen and (min-width:700px){
+
+    .home-quiz-button{
+
+        min-width:auto;
+        padding:0.5rem 0.9rem;
+        font-size:0.95rem;
+
+    }
+
+    .home-image-placeholder{
+
+        min-height:20rem;
+
+    }
+
+}
+
+@media screen and (min-width:960px){
+
+    .home-grid-layout{
+
+        width:min(1080px, calc(100vw - 4rem));
+        max-width:1080px;
+        margin:0 auto 1.75rem;
+        grid-template-columns:minmax(0, 1.08fr) minmax(0, 0.92fr);
+        grid-template-areas:
+            "image intro"
+            "support secondary";
+        align-items:start;
+        gap:2rem;
+
+    }
+
+    .home-grid-layout > .home-image-placeholder:first-child{
+
+        grid-area:image;
+        font-size:1.05rem;
+        margin-bottom:0;
+        align-self:start;
+        height:41rem;
+
+    }
+
+    .home-intro-section{
+
+        grid-area:intro;
+        min-height:31rem;
+        padding:2rem;
+
+    }
+
+    .home-support-section{
+
+        grid-area:support;
+        padding:1.8rem 2rem 2.4rem;
+        align-self:start;
+
+    }
+
+    .home-support-section::before{
+
+        display:none;
+
+    }
+
+    .home-image-placeholder-secondary{
+
+        grid-area:secondary;
+        min-height:0;
+        height:100%;
+        align-self:stretch;
+
+    }
+
+    .home-intro-section h2,
+    .home-support-section h2{
+
+        margin-bottom:1.2rem;
+
+    }
+
+}
